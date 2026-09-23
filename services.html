@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services – Business Setup, Accounting, VAT, Visas &amp; Web | Profentraaurex Dubai</title>
+    <meta name="description" content="Explore Profentraaurex services in Dubai: business setup, DED/DET licence, UAE visas, PRO services, accounting &amp; bookkeeping, VAT &amp; Corporate Tax, AML compliance and website development." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        /* ============================================================
+           RESET & BASE
+           ============================================================ */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --gold: #C89D6E;
+            --gold-light: #DAB282;
+            --gold-dark: #A87D54;
+            --gold-pale: rgba(200, 157, 110, 0.08);
+            --gold-glow: rgba(200, 157, 110, 0.25);
+            --gold-subtle: rgba(200, 157, 110, 0.04);
+            --charcoal: #0a0a0a;
+            --dark-bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --border-gold: rgba(200, 157, 110, 0.10);
+            --font-serif: 'Playfair Display', serif;
+            --font-garamond: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --font-inter: 'Inter', sans-serif;
+            --transition-smooth: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        html, body {
+            width: 100%; margin: 0; padding: 0;
+            overflow-x: hidden; background: #050505; scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font-inter);
+            color: #fff;
+            cursor: none;
+            -webkit-font-smoothing: antialiased;
+            background: #050505;
+        }
+        a { text-decoration: none; }
+        img { max-width: 100%; display: block; }
+
+        section[id], article[id], div[id] { scroll-margin-top: 120px; }
+
+        /* ============================================================
+           CUSTOM CURSOR
+           ============================================================ */
+        .custom-cursor {
+            position: fixed; width: 56px; height: 56px;
+            border: 1.5px solid var(--gold); border-radius: 50%;
+            pointer-events: none; z-index: 99999;
+            transition: transform 0.4s ease, width 0.5s ease, height 0.5s ease, background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+            transform: translate(-50%, -50%);
+            background: rgba(200, 157, 110, 0.03);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 60px rgba(200, 157, 110, 0.04), inset 0 0 60px rgba(200, 157, 110, 0.02);
+        }
+        .cursor-dot {
+            position: fixed; width: 5px; height: 5px; background: var(--gold);
+            border-radius: 50%; pointer-events: none; z-index: 99999;
+            transform: translate(-50%, -50%); transition: 0.15s ease;
+            box-shadow: 0 0 30px rgba(200, 157, 110, 0.6), 0 0 60px rgba(200, 157, 110, 0.2);
+        }
+        .custom-cursor.hover {
+            width: 88px; height: 88px;
+            background: rgba(200, 157, 110, 0.08);
+            border-color: var(--gold-light);
+            box-shadow: 0 0 80px rgba(200, 157, 110, 0.12), inset 0 0 80px rgba(200, 157, 110, 0.04);
+        }
+        @media (max-width: 1024px) {
+            .custom-cursor, .cursor-dot { display: none; }
+            body { cursor: auto; }
+        }
+
+        /* ============================================================
+           SCROLLBAR
+           ============================================================ */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 0; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
+
+        /* ============================================================
+           BUTTONS
+           ============================================================ */
+        .btn {
+            font-family: var(--font-sans); font-weight: 600;
+            padding: 18px 44px; border-radius: 0;
+            transition: var(--transition-smooth);
+            font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase;
+            border: none; position: relative; overflow: hidden; cursor: pointer;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #050505;
+            box-shadow: 0 4px 30px rgba(200, 157, 110, 0.20);
+        }
+        .btn-gold:hover {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+            color: #050505; transform: translateY(-3px);
+            box-shadow: 0 12px 50px rgba(200, 157, 110, 0.35);
+        }
+        .btn-shimmer {
+            background: linear-gradient(90deg, #C89D6E 0%, #E8D5B5 30%, #C89D6E 60%, #B8895A 100%);
+            background-size: 400% 100%;
+            animation: shimmerBtn 5s ease-in-out infinite;
+            color: #050505; border: none;
+        }
+        .btn-shimmer:hover {
+            animation: none;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+            color: #050505; transform: translateY(-3px);
+            box-shadow: 0 12px 50px rgba(200, 157, 110, 0.35);
+        }
+        @keyframes shimmerBtn {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .btn-gold-outline-premium {
+            background: transparent; color: var(--gold);
+            border: 1.5px solid var(--gold);
+            position: relative; overflow: hidden; z-index: 1;
+        }
+        .btn-gold-outline-premium::before {
+            content: ''; position: absolute; top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(200, 157, 110, 0.10), transparent);
+            transition: 0.8s ease; z-index: -1;
+        }
+        .btn-gold-outline-premium:hover::before { left: 100%; }
+        .btn-gold-outline-premium:hover {
+            background: rgba(200, 157, 110, 0.06);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 50px rgba(200, 157, 110, 0.12);
+            color: var(--gold);
+        }
+
+        /* ============================================================
+           HEADER
+           ============================================================ */
+        .custom-header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            z-index: 9999; padding: 22px 0;
+            transition: var(--transition-smooth);
+            background: transparent; margin: 0;
+        }
+        .custom-header.scrolled {
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(24px) saturate(1.2);
+            border-bottom: 1px solid rgba(200, 157, 110, 0.08);
+            padding: 10px 0;
+            box-shadow: 0 10px 60px rgba(0, 0, 0, 0.6);
+        }
+        .custom-header .logo {
+            display: flex; align-items: center; text-decoration: none; gap: 16px;
+        }
+        .custom-header .logo img {
+            height: 88px; width: auto; display: block;
+            filter: brightness(1.05) drop-shadow(0 0 25px rgba(200, 157, 110, 0.15));
+            transition: var(--transition-smooth); border-radius: 4px;
+        }
+        .custom-header .logo:hover img {
+            filter: brightness(1.15) drop-shadow(0 0 40px rgba(200, 157, 110, 0.30));
+            transform: scale(1.02);
+        }
+        .custom-header .logo-text {
+            font-family: var(--font-serif); font-size: 24px; font-weight: 700;
+            color: #fff; letter-spacing: 2px; line-height: 1.1;
+        }
+        .custom-header .logo-text span { color: var(--gold); font-weight: 800; }
+        .custom-header .logo-tagline {
+            font-family: var(--font-inter); font-size: 0.55rem;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.25); margin-top: -2px; font-weight: 300;
+        }
+        .navbar-nav .nav-link {
+            font-family: var(--font-sans); font-weight: 500;
+            color: rgba(255, 255, 255, 0.45) !important;
+            margin: 0 14px; padding: 6px 0 !important;
+            position: relative; transition: var(--transition-smooth);
+            font-size: 0.7rem; letter-spacing: 2.5px; text-transform: uppercase;
+        }
+        .navbar-nav .nav-link::after {
+            content: ''; position: absolute; bottom: 0; left: 50%;
+            transform: translateX(-50%); width: 0; height: 1.5px;
+            background: var(--gold); transition: var(--transition-smooth); border-radius: 0;
+        }
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active-page::after { width: 70%; }
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active-page { color: #fff !important; }
+
+        .navbar-nav .dropdown-menu {
+            background: rgba(5, 5, 5, 0.98);
+            -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
+            border: 1px solid rgba(200, 157, 110, 0.12);
+            border-radius: 0; padding: 10px 0; margin-top: 16px;
+            min-width: 310px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75);
+        }
+        .navbar-nav .dropdown-item {
+            font-family: var(--font-sans); font-weight: 500;
+            font-size: 0.68rem; letter-spacing: 1.8px; text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+            padding: 12px 26px; border-left: 2px solid transparent;
+            transition: var(--transition-smooth); white-space: normal; background: transparent;
+        }
+        .navbar-nav .dropdown-item:hover,
+        .navbar-nav .dropdown-item:focus,
+        .navbar-nav .dropdown-item.active {
+            background: rgba(200, 157, 110, 0.06); color: #fff;
+            border-left-color: var(--gold); padding-left: 32px;
+        }
+        .navbar-nav .nav-link.dropdown-toggle::before {
+            content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+            font-size: 0.45rem; margin-right: 7px; opacity: 0.6;
+            display: inline-block; transition: transform 0.35s ease;
+            position: relative; top: -1px;
+        }
+        .navbar-nav .nav-link.dropdown-toggle[aria-expanded="true"]::before { transform: rotate(180deg); }
+        .navbar-nav .nav-link.dropdown-toggle::after { border: none; margin: 0; }
+
+        .navbar-nav .nav-link.call-us-link {
+            color: #fff !important; font-weight: 700; letter-spacing: 1px;
+            margin-left: 18px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            padding: 10px 28px !important; border-radius: 0;
+            transition: var(--transition-smooth); position: relative;
+            border: none; text-transform: none; font-size: 0.85rem;
+            box-shadow: 0 4px 30px rgba(200, 157, 110, 0.20);
+        }
+        .navbar-nav .nav-link.call-us-link i {
+            margin-right: 10px; font-size: 0.9rem;
+            color: #050505; transition: var(--transition-smooth);
+        }
+        .navbar-nav .nav-link.call-us-link .phone-number {
+            font-weight: 600; letter-spacing: 0.5px; color: #050505;
+        }
+        .navbar-nav .nav-link.call-us-link::after { display: none; }
+        .navbar-nav .nav-link.call-us-link:hover {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 50px rgba(200, 157, 110, 0.40);
+            color: #fff !important;
+        }
+        .navbar-nav .nav-link.call-us-link:hover i,
+        .navbar-nav .nav-link.call-us-link:hover .phone-number { color: #050505; }
+
+        .navbar-toggler {
+            border: 1px solid rgba(200, 157, 110, 0.25);
+            padding: 8px 12px; border-radius: 0;
+        }
+        .navbar-toggler:focus { box-shadow: none; }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c89d6e' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-nav .dropdown-menu {
+                background: rgba(200, 157, 110, 0.03);
+                border: none; border-left: 1px solid rgba(200, 157, 110, 0.15);
+                margin: 6px 0 6px 8px; box-shadow: none; padding: 4px 0;
+            }
+            .navbar-nav .dropdown-item { padding: 10px 18px; font-size: 0.62rem; }
+            .navbar-nav .dropdown-item:hover { padding-left: 24px; }
+            .navbar-nav .nav-link.call-us-link {
+                margin-left: 0; padding: 10px 20px !important;
+                font-size: 0.8rem; display: inline-block; width: auto; margin-top: 6px;
+            }
+            .custom-header .logo img { height: 56px; }
+        }
+        @media (max-width: 576px) {
+            .navbar-nav .nav-link.call-us-link { padding: 8px 16px !important; font-size: 0.7rem; }
+            .navbar-nav .nav-link.call-us-link .phone-number { font-size: 0.7rem; }
+            .custom-header .logo-text { font-size: 18px; }
+            .custom-header .logo img { height: 48px; }
+            .custom-header .logo-tagline { display: none; }
+            .custom-header .logo { gap: 10px; }
+        }
+
+        /* ============================================================
+           WHATSAPP FLOAT
+           ============================================================ */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; z-index: 99998;
+            display: flex; align-items: center; justify-content: center;
+            width: 64px; height: 64px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #050505; font-size: 2rem; text-decoration: none;
+            box-shadow: 0 8px 40px rgba(200, 157, 110, 0.30), 0 0 0 0 rgba(200, 157, 110, 0.2);
+            transition: var(--transition-smooth);
+            animation: whatsappPulse 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.05);
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.12) translateY(-4px);
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+            color: #050505;
+            box-shadow: 0 12px 60px rgba(200, 157, 110, 0.45), 0 0 0 10px rgba(200, 157, 110, 0.06);
+            animation: none;
+        }
+        .whatsapp-float .whatsapp-tooltip {
+            position: absolute; right: 78px;
+            background: rgba(5, 5, 5, 0.95); backdrop-filter: blur(16px);
+            color: #fff; padding: 8px 18px; border-radius: 0;
+            font-family: var(--font-inter); font-size: 0.7rem;
+            letter-spacing: 0.5px; white-space: nowrap;
+            border: 1px solid rgba(200, 157, 110, 0.10);
+            opacity: 0; pointer-events: none;
+            transition: var(--transition-smooth); transform: translateX(10px);
+        }
+        .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; transform: translateX(0); }
+        .whatsapp-float .whatsapp-tooltip::after {
+            content: ''; position: absolute; right: -6px; top: 50%;
+            transform: translateY(-50%);
+            border-left: 6px solid rgba(5, 5, 5, 0.95);
+            border-top: 6px solid transparent; border-bottom: 6px solid transparent;
+        }
+        @media (max-width: 576px) {
+            .whatsapp-float { width: 56px; height: 56px; font-size: 1.6rem; bottom: 18px; right: 18px; }
+            .whatsapp-float .whatsapp-tooltip { display: none; }
+        }
+        @keyframes whatsappPulse {
+            0%, 100% { box-shadow: 0 8px 40px rgba(200, 157, 110, 0.30), 0 0 0 0 rgba(200, 157, 110, 0.15); }
+            50% { box-shadow: 0 8px 50px rgba(200, 157, 110, 0.45), 0 0 0 14px rgba(200, 157, 110, 0); }
+        }
+
+        /* ============================================================
+           BACK TO TOP
+           ============================================================ */
+        .back-to-top {
+            position: fixed; bottom: 100px; right: 30px; z-index: 99997;
+            width: 48px; height: 48px;
+            background: rgba(200, 157, 110, 0.08);
+            border: 1px solid rgba(200, 157, 110, 0.15);
+            color: var(--gold);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; transition: var(--transition-smooth);
+            opacity: 0; transform: translateY(20px); pointer-events: none;
+            backdrop-filter: blur(12px);
+        }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .back-to-top:hover {
+            background: rgba(200, 157, 110, 0.15);
+            border-color: var(--gold); color: var(--gold-light);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 40px rgba(200, 157, 110, 0.10);
+        }
+        @media (max-width: 576px) {
+            .back-to-top { bottom: 85px; right: 18px; width: 42px; height: 42px; font-size: 1rem; }
+        }
+
+        /* ============================================================
+           PAGE HERO
+           ============================================================ */
+        .page-hero {
+            position: relative; padding: 210px 0 90px;
+            background: #050505; overflow: hidden;
+            border-bottom: 1px solid rgba(200, 157, 110, 0.05);
+        }
+        .page-hero-bg {
+            position: absolute; inset: 0; pointer-events: none;
+            background:
+                radial-gradient(ellipse at 18% 20%, rgba(200, 157, 110, 0.075), transparent 55%),
+                radial-gradient(ellipse at 88% 78%, rgba(200, 157, 110, 0.05), transparent 55%);
+        }
+        .page-hero .container { position: relative; z-index: 2; }
+        .page-hero h1 {
+            font-family: var(--font-serif); font-weight: 700;
+            font-size: 4.2rem; line-height: 1.05;
+            color: #fff; margin-bottom: 18px;
+            opacity: 0; transform: translateY(30px);
+            animation: heroFadeUp 1s ease forwards 0.15s;
+        }
+        .page-hero h1 .gold { color: var(--gold); }
+        .page-hero p {
+            color: rgba(255, 255, 255, 0.42); font-size: 1.1rem;
+            max-width: 640px; line-height: 1.9; font-weight: 300;
+            opacity: 0; transform: translateY(30px);
+            animation: heroFadeUp 1s ease forwards 0.35s;
+        }
+        @keyframes heroFadeUp { to { opacity: 1; transform: translateY(0); } }
+
+        .hero-badge {
+            display: inline-block;
+            font-family: var(--font-sans); font-weight: 600;
+            font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(200, 157, 110, 0.15);
+            padding: 8px 28px; margin-bottom: 26px;
+            background: rgba(200, 157, 110, 0.04);
+            position: relative;
+            opacity: 0; transform: translateY(20px);
+            animation: heroFadeUp 1s ease forwards 0s;
+        }
+        .hero-badge::after {
+            content: ''; position: absolute; bottom: -1px; left: 20%;
+            width: 60%; height: 1px; background: var(--gold); opacity: 0.2;
+        }
+
+        .breadcrumb-nav {
+            margin-top: 28px;
+            font-family: var(--font-sans); font-size: 0.62rem;
+            letter-spacing: 3px; text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.22);
+            display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+            opacity: 0; transform: translateY(20px);
+            animation: heroFadeUp 1s ease forwards 0.5s;
+        }
+        .breadcrumb-nav a { color: rgba(255, 255, 255, 0.35); transition: var(--transition-smooth); }
+        .breadcrumb-nav a:hover { color: var(--gold); }
+        .breadcrumb-nav .current { color: var(--gold); }
+
+        @media (max-width: 992px) {
+            .page-hero { padding: 170px 0 70px; }
+            .page-hero h1 { font-size: 3rem; }
+        }
+        @media (max-width: 576px) {
+            .page-hero { padding: 140px 0 55px; }
+            .page-hero h1 { font-size: 2.1rem; }
+            .page-hero p { font-size: 0.95rem; }
+            .hero-badge { font-size: 0.5rem; padding: 6px 18px; letter-spacing: 3px; }
+        }
+
+        /* ============================================================
+           SECTION DIVIDER + LABELS
+           ============================================================ */
+        .section-divider-wrap {
+            position: relative; z-index: 2;
+            width: 100vw; height: 2px;
+            background: rgba(200, 157, 110, 0.03);
+            margin: 0 0 60px 0;
+            margin-left: calc(-50vw + 50%);
+            overflow: hidden; border-radius: 0;
+        }
+        .section-divider-wrap .gold-line {
+            position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            transform-origin: left center; transform: scaleX(0);
+            transition: transform 1.8s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 0 60px rgba(200, 157, 110, 0.15), 0 0 120px rgba(200, 157, 110, 0.04);
+        }
+        .section-divider-wrap.reverse .gold-line { transform-origin: right center; }
+        .section-visible .section-divider-wrap .gold-line { transform: scaleX(1); }
+
+        .section-label {
+            font-family: var(--font-sans); font-weight: 700;
+            font-size: 0.65rem; letter-spacing: 6px; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 14px; display: inline-block; position: relative;
+        }
+        .section-label::after {
+            content: ''; display: block; width: 40px; height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent); margin-top: 10px;
+        }
+        .section-label::before {
+            content: '✦ '; color: var(--gold); opacity: 0.4;
+            font-size: 0.5rem; letter-spacing: 2px;
+        }
+        .section-title {
+            font-family: var(--font-serif); font-size: 3.6rem; font-weight: 700;
+            line-height: 1.1; color: #fff; margin-bottom: 0.5rem;
+        }
+        .section-title .gold { color: var(--gold); position: relative; }
+        .section-title .gold::after {
+            content: ''; position: absolute; bottom: 2px; left: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent); opacity: 0.2;
+        }
+        .section-sub {
+            font-family: var(--font-inter); font-weight: 300; font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.30); max-width: 620px;
+            margin-bottom: 40px; line-height: 1.7;
+        }
+        @media (max-width: 992px) { .section-title { font-size: 2.8rem; } }
+        @media (max-width: 768px) {
+            .section-title { font-size: 2.2rem; }
+            .section-sub { font-size: 0.95rem; }
+            .section-divider-wrap { margin-bottom: 40px; }
+        }
+        @media (max-width: 576px) {
+            .section-title { font-size: 1.8rem; }
+            .section-sub { font-size: 0.9rem; }
+            .section-divider-wrap { margin-bottom: 30px; }
+            .section-label { font-size: 0.55rem; letter-spacing: 4px; }
+        }
+
+        /* ============================================================
+           QUICK JUMP PILLS
+           ============================================================ */
+        .service-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 0; }
+        .service-pills a {
+            font-family: var(--font-sans); font-size: 0.62rem; font-weight: 500;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.40);
+            border: 1px solid rgba(200, 157, 110, 0.10);
+            padding: 11px 20px;
+            background: rgba(255, 255, 255, 0.01);
+            transition: var(--transition-smooth);
+        }
+        .service-pills a:hover {
+            color: var(--gold); border-color: var(--gold);
+            background: rgba(200, 157, 110, 0.05);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 576px) {
+            .service-pills a { font-size: 0.55rem; padding: 9px 14px; letter-spacing: 1.5px; }
+        }
+
+        /* ============================================================
+           SERVICES LIST — DETAILED SECTIONS
+           ============================================================ */
+        .services-list {
+            position: relative; padding: 90px 0 40px;
+            background: #050505; overflow: visible;
+        }
+        .services-list .bg-image {
+            position: absolute; inset: 0;
+            background-image: url('bg1.jpg');
+            background-size: cover; background-position: center;
+            opacity: 0.03; z-index: 0;
+        }
+        .services-list .overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(5, 5, 5, 0.90) 0%, rgba(5, 5, 5, 0.55) 50%, rgba(5, 5, 5, 0.82) 100%);
+            z-index: 1;
+        }
+        .services-list .container { position: relative; z-index: 2; }
+
+        .service-detail {
+            position: relative;
+            padding: 64px 0;
+            border-top: 1px solid rgba(200, 157, 110, 0.07);
+        }
+        .service-detail:first-of-type { border-top: none; padding-top: 24px; }
+
+        .sd-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+        .sd-number {
+            font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700;
+            letter-spacing: 3px; color: var(--gold);
+            border: 1px solid rgba(200, 157, 110, 0.18);
+            padding: 5px 13px; background: rgba(200, 157, 110, 0.04);
+        }
+        .sd-icon { font-size: 1.5rem; color: var(--gold); opacity: 0.8; }
+
+        .sd-title {
+            font-family: var(--font-serif); font-weight: 700;
+            font-size: 2.4rem; line-height: 1.15;
+            color: #fff; margin-bottom: 14px;
+        }
+        .sd-lede {
+            font-family: var(--font-inter); font-weight: 300;
+            font-size: 1.02rem; line-height: 1.9;
+            color: rgba(255, 255, 255, 0.42);
+            max-width: 850px;
+        }
+
+        .sd-subhead {
+            font-family: var(--font-sans); font-weight: 600;
+            font-size: 0.66rem; letter-spacing: 4px; text-transform: uppercase;
+            color: rgba(200, 157, 110, 0.75);
+            margin: 40px 0 20px;
+            display: flex; align-items: center; gap: 16px;
+        }
+        .sd-subhead::after {
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(90deg, rgba(200, 157, 110, 0.18), transparent);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .step {
+            display: flex; gap: 16px;
+            padding: 18px 20px;
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(200, 157, 110, 0.05);
+            border-left: 2px solid rgba(200, 157, 110, 0.12);
+            transition: var(--transition-smooth);
+        }
+        .step:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-left-color: var(--gold);
+            transform: translateX(5px);
+        }
+        .step-num {
+            font-family: var(--font-sans); font-size: 0.6rem; font-weight: 700;
+            letter-spacing: 2px; color: var(--gold); opacity: 0.65;
+            padding-top: 4px; min-width: 26px;
+        }
+        .step h4 {
+            font-family: var(--font-serif); font-size: 1rem; font-weight: 600;
+            color: #fff; margin-bottom: 4px;
+        }
+        .step p {
+            font-family: var(--font-inter); font-weight: 300;
+            font-size: 0.85rem; line-height: 1.65;
+            color: rgba(255, 255, 255, 0.32); margin: 0;
+        }
+
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px 26px;
+        }
+        .include-item {
+            font-family: var(--font-inter); font-weight: 300;
+            font-size: 0.88rem; color: rgba(255, 255, 255, 0.38);
+            display: flex; align-items: flex-start; gap: 11px;
+            padding: 7px 0; line-height: 1.55;
+        }
+        .include-item i { color: var(--gold); font-size: 0.5rem; margin-top: 8px; opacity: 0.6; }
+
+        .sd-note {
+            margin-top: 24px; padding: 16px 22px;
+            border-left: 2px solid rgba(200, 157, 110, 0.35);
+            background: rgba(200, 157, 110, 0.03);
+            font-family: var(--font-inter); font-weight: 300;
+            font-size: 0.86rem; color: rgba(255, 255, 255, 0.38);
+            line-height: 1.7;
+        }
+
+        .sd-cta {
+            margin-top: 30px;
+            display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+        }
+        .sd-cta .btn { padding: 15px 36px; font-size: 0.68rem; }
+
+        @media (max-width: 992px) {
+            .sd-title { font-size: 2rem; }
+            .process-steps { grid-template-columns: 1fr; }
+            .includes-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .service-detail { padding: 44px 0; }
+            .sd-title { font-size: 1.65rem; }
+            .sd-lede { font-size: 0.93rem; }
+            .includes-grid { grid-template-columns: 1fr; }
+            .sd-cta { flex-direction: column; align-items: stretch; }
+            .sd-cta .btn { width: 100%; text-align: center; }
+        }
+        @media (max-width: 576px) {
+            .service-detail { padding: 34px 0; }
+            .sd-title { font-size: 1.4rem; }
+            .sd-lede { font-size: 0.88rem; }
+            .step { padding: 14px 15px; gap: 12px; }
+            .step h4 { font-size: 0.92rem; }
+            .step p { font-size: 0.8rem; }
+            .sd-subhead { font-size: 0.58rem; letter-spacing: 3px; margin: 28px 0 16px; }
+            .include-item { font-size: 0.82rem; }
+        }
+
+        /* ============================================================
+           ADDITIONAL VERTICALS — TWO-COLUMN GRID
+           ============================================================ */
+        .verticals-section {
+            position: relative; padding: 80px 0 100px;
+            background: #050505; overflow: visible;
+            border-top: 1px solid rgba(200, 157, 110, 0.04);
+            border-bottom: 1px solid rgba(200, 157, 110, 0.04);
+        }
+        .verticals-section .bg-image {
+            position: absolute; inset: 0;
+            background-image: url('bg1.jpg');
+            background-size: cover; background-position: center;
+            opacity: 0.03; z-index: 0;
+        }
+        .verticals-section .overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(5, 5, 5, 0.90) 0%, rgba(5, 5, 5, 0.55) 50%, rgba(5, 5, 5, 0.82) 100%);
+            z-index: 1;
+        }
+        .verticals-section .container { position: relative; z-index: 2; }
+
+        /* Two-column grid */
+        .verticals-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 20px;
+            align-items: stretch;
+        }
+
+        /* Individual service card */
+        .vertical-card {
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(200, 157, 110, 0.06);
+            border-left: 3px solid rgba(200, 157, 110, 0.15);
+            padding: 30px 28px 26px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .vertical-card::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 50%; height: 100%;
+            background: radial-gradient(ellipse at 100% 0%, rgba(200, 157, 110, 0.03), transparent 70%);
+            pointer-events: none;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+        .vertical-card:hover::after { opacity: 1; }
+        .vertical-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(200, 157, 110, 0.12);
+            border-left-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+        }
+
+        .vc-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .vc-num {
+            font-family: var(--font-sans);
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--gold);
+            border: 1px solid rgba(200, 157, 110, 0.18);
+            padding: 5px 13px;
+            background: rgba(200, 157, 110, 0.04);
+            transition: var(--transition-smooth);
+        }
+        .vc-icon {
+            font-size: 1.7rem;
+            color: var(--gold);
+            opacity: 0.6;
+            transition: var(--transition-smooth);
+            line-height: 1;
+        }
+        .vertical-card:hover .vc-icon {
+            opacity: 1;
+            transform: scale(1.08) rotate(-3deg);
+        }
+
+        .vc-title {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.22rem;
+            line-height: 1.3;
+            color: #fff;
+            margin-bottom: 12px;
+            transition: var(--transition-smooth);
+            position: relative;
+            z-index: 1;
+        }
+        .vertical-card:hover .vc-title { color: var(--gold-light); }
+
+        .vc-desc {
+            font-family: var(--font-inter);
+            font-weight: 300;
+            font-size: 0.88rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.38);
+            margin-bottom: 18px;
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vc-features {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 16px;
+            margin-bottom: 20px;
+            border-top: 1px solid rgba(200, 157, 110, 0.07);
+            position: relative;
+            z-index: 1;
+        }
+        .vc-feature {
+            font-family: var(--font-inter);
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.32);
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            line-height: 1.55;
+            transition: var(--transition-smooth);
+        }
+        .vertical-card:hover .vc-feature { color: rgba(255, 255, 255, 0.45); }
+        .vc-feature i {
+            color: var(--gold);
+            font-size: 0.48rem;
+            margin-top: 7px;
+            opacity: 0.6;
+            flex-shrink: 0;
+        }
+
+        .vc-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            font-size: 0.62rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            border-bottom: 1px solid rgba(200, 157, 110, 0.18);
+            padding-bottom: 5px;
+            transition: var(--transition-smooth);
+            align-self: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+        .vc-cta i {
+            font-size: 0.65rem;
+            transition: transform 0.5s ease;
+        }
+        .vc-cta:hover {
+            color: var(--gold-light);
+            border-bottom-color: var(--gold);
+            letter-spacing: 3px;
+        }
+        .vc-cta:hover i { transform: translateX(5px); }
+
+        @media (max-width: 992px) {
+            .vertical-card { padding: 26px 24px 22px; }
+            .vc-title { font-size: 1.1rem; }
+            .vc-desc { font-size: 0.85rem; }
+        }
+        @media (max-width: 820px) {
+            .verticals-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+        @media (max-width: 576px) {
+            .vertical-card { padding: 22px 20px 20px; }
+            .vc-title { font-size: 1.02rem; }
+            .vc-desc { font-size: 0.82rem; }
+            .vc-feature { font-size: 0.76rem; }
+            .vc-icon { font-size: 1.45rem; }
+            .vc-cta { font-size: 0.58rem; }
+        }
+
+        /* ============================================================
+           CTA BAND
+           ============================================================ */
+        .cta-band {
+            position: relative; padding: 80px 0; text-align: center;
+            background: linear-gradient(180deg, rgba(200, 157, 110, 0.035), transparent);
+            border-bottom: 1px solid rgba(200, 157, 110, 0.04);
+            overflow: hidden;
+        }
+        .cta-band h2 {
+            font-family: var(--font-serif); font-weight: 700;
+            font-size: 2.8rem; line-height: 1.15; color: #fff; margin-bottom: 14px;
+        }
+        .cta-band h2 .gold { color: var(--gold); }
+        .cta-band p {
+            font-family: var(--font-inter); font-weight: 300;
+            font-size: 1rem; color: rgba(255, 255, 255, 0.35);
+            max-width: 600px; margin: 0 auto 30px; line-height: 1.8;
+        }
+        .cta-band .btn-group-cta {
+            display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+        }
+        @media (max-width: 768px) {
+            .cta-band { padding: 56px 0; }
+            .cta-band h2 { font-size: 1.9rem; }
+            .cta-band p { font-size: 0.9rem; }
+            .cta-band .btn-group-cta .btn { width: 100%; text-align: center; }
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .site-footer {
+            position: relative; background: #030303;
+            border-top: 1px solid rgba(200, 157, 110, 0.04);
+            padding: 60px 0 30px; color: rgba(255, 255, 255, 0.4); overflow: hidden;
+        }
+        .site-footer .footer-glow {
+            position: absolute; top: -200px; right: -100px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(200, 157, 110, 0.02) 0%, transparent 70%);
+            pointer-events: none; z-index: 0;
+        }
+        .site-footer .container { position: relative; z-index: 1; }
+        .site-footer .footer-brand {
+            display: flex; align-items: center; gap: 14px; margin-bottom: 16px;
+        }
+        .site-footer .footer-brand img {
+            height: 52px; width: auto;
+            filter: brightness(1.05) drop-shadow(0 0 15px rgba(200, 157, 110, 0.10));
+            border-radius: 4px; transition: var(--transition-smooth);
+        }
+        .site-footer .footer-brand:hover img {
+            filter: brightness(1.15) drop-shadow(0 0 25px rgba(200, 157, 110, 0.20));
+        }
+        .site-footer .footer-brand-text {
+            font-family: var(--font-serif); font-size: 20px; font-weight: 700;
+            color: #fff; letter-spacing: 1.5px;
+        }
+        .site-footer .footer-brand-text span { color: var(--gold); }
+        .site-footer .footer-blurb {
+            font-family: var(--font-inter); font-weight: 300;
+            font-size: 0.95rem; line-height: 1.8;
+            color: rgba(255, 255, 255, 0.35); max-width: 400px; margin-bottom: 20px;
+        }
+        .site-footer .footer-blurb strong { color: rgba(255, 255, 255, 0.55); font-weight: 400; }
+        .site-footer .footer-heading {
+            font-family: var(--font-sans); font-weight: 600;
+            font-size: 0.65rem; letter-spacing: 3.5px; text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.20); margin-bottom: 16px;
+        }
+        .site-footer .footer-links { list-style: none; padding: 0; margin: 0; }
+        .site-footer .footer-links li { margin-bottom: 8px; }
+        .site-footer .footer-links a {
+            font-family: var(--font-inter); font-weight: 300;
+            font-size: 0.9rem; color: rgba(255, 255, 255, 0.25);
+            text-decoration: none; transition: var(--transition-smooth);
+            display: inline-block; position: relative;
+        }
+        .site-footer .footer-links a::after {
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 0; height: 1px; background: var(--gold);
+            transition: var(--transition-smooth);
+        }
+        .site-footer .footer-links a:hover { color: #fff; }
+        .site-footer .footer-links a:hover::after { width: 100%; }
+        .site-footer .footer-social { display: flex; gap: 12px; margin-top: 8px; }
+        .site-footer .footer-social a {
+            display: flex; align-items: center; justify-content: center;
+            width: 44px; height: 44px;
+            border: 1px solid rgba(200, 157, 110, 0.06);
+            color: rgba(255, 255, 255, 0.20); font-size: 1rem;
+            transition: var(--transition-smooth); border-radius: 0;
+            background: rgba(255, 255, 255, 0.01); text-decoration: none;
+        }
+        .site-footer .footer-social a:hover {
+            border-color: var(--gold); color: var(--gold);
+            background: rgba(200, 157, 110, 0.04);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(200, 157, 110, 0.04);
+        }
+        .site-footer .footer-divider {
+            border: 0; height: 1px;
+            background: linear-gradient(90deg, rgba(200, 157, 110, 0.08), rgba(200, 157, 110, 0.01) 80%);
+            margin: 30px 0 20px;
+        }
+        .site-footer .footer-bottom {
+            font-family: var(--font-inter); font-weight: 300;
+            font-size: 0.7rem; color: rgba(255, 255, 255, 0.10); letter-spacing: 1.5px;
+        }
+        .site-footer .footer-bottom span { color: var(--gold); opacity: 0.4; }
+
+        @media (max-width: 992px) {
+            .site-footer .footer-blurb { max-width: 100%; }
+            .site-footer .footer-col { margin-bottom: 30px; }
+            .site-footer .footer-brand img { height: 44px; }
+        }
+        @media (max-width: 768px) {
+            .site-footer { padding: 40px 0 20px; }
+            .site-footer .footer-brand-text { font-size: 17px; }
+            .site-footer .footer-blurb { font-size: 0.85rem; }
+            .site-footer .footer-social a { width: 40px; height: 40px; font-size: 0.9rem; }
+            .site-footer .footer-bottom { font-size: 0.6rem; text-align: center; }
+            .site-footer .footer-col { margin-bottom: 24px; }
+            .site-footer .footer-brand img { height: 40px; }
+        }
+        @media (max-width: 576px) {
+            .site-footer .footer-brand-text { font-size: 15px; }
+            .site-footer .footer-blurb { font-size: 0.8rem; }
+            .site-footer .footer-social a { width: 36px; height: 36px; font-size: 0.8rem; }
+            .site-footer .footer-brand img { height: 36px; }
+        }
+
+        /* ============================================================
+           AOS OVERRIDES
+           ============================================================ */
+        [data-aos] { pointer-events: none; }
+        [data-aos].aos-animate { pointer-events: auto; }
+    </style>
+</head>
+
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- BACK TO TOP -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
+    <header class="custom-header" id="mainHeader">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Profentraaurex Logo" />
+                    <div>
+                        <div class="logo-text">PROFENTRA<span>AUREX</span></div>
+                        <div class="logo-tagline">Accounting &amp; Business Advisory</div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active-page" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="services.html#business-setup">Business Setup in Dubai</a></li>
+                                <li><a class="dropdown-item" href="services.html#ded-det-licence">DED / DET Company Licence</a></li>
+                                <li><a class="dropdown-item" href="services.html#visa-services">UAE Visa Services</a></li>
+                                <li><a class="dropdown-item" href="services.html#pro-services">PRO Services</a></li>
+                                <li><a class="dropdown-item" href="services.html#accounting-bookkeeping">Accounting &amp; Bookkeeping</a></li>
+                                <li><a class="dropdown-item" href="services.html#vat-corporate-tax">VAT &amp; Corporate Tax</a></li>
+                                <li><a class="dropdown-item" href="services.html#aml-compliance">AML Registration &amp; Policy</a></li>
+                                <li><a class="dropdown-item" href="services.html#website-creation">Website Creation</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="index.html#whyus">Why Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#faq">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#website">Websites</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link call-us-link" href="tel:+971551020796">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="phone-number">+971 55 1020 796</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="hero-badge">Our Services</div>
+                    <h1>Complete <span class="gold">Business Solutions</span><br />Under One Roof</h1>
+                    <p>From company formation and government approvals to accounting, tax, compliance and websites — everything your business needs to start, run and grow in the UAE.</p>
+                    <nav class="breadcrumb-nav">
+                        <a href="index.html">Home</a>
+                        <span>/</span>
+                        <span class="current">Services</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES LIST — 8 CORE SERVICES WITH FULL PROCESS
+         ============================================================ -->
+    <section class="services-list">
+        <div class="bg-image"></div>
+        <div class="overlay"></div>
+
+        <div class="container">
+
+            <div class="section-divider-wrap">
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <span class="section-label">8 Core Service Lines</span>
+                    <h2 class="section-title">What We <span class="gold">Do</span> For You</h2>
+                    <p class="section-sub">Each service below includes the full process, step by step — so you know exactly what happens, when it happens and what you receive.</p>
+                </div>
+            </div>
+
+            <!-- QUICK JUMP -->
+            <div class="service-pills" data-aos="fade-up" data-aos-delay="80">
+                <a href="#business-setup">Business Setup</a>
+                <a href="#ded-det-licence">DED / DET Licence</a>
+                <a href="#visa-services">Visa Services</a>
+                <a href="#pro-services">PRO Services</a>
+                <a href="#accounting-bookkeeping">Accounting &amp; Bookkeeping</a>
+                <a href="#vat-corporate-tax">VAT &amp; Corporate Tax</a>
+                <a href="#aml-compliance">AML Compliance</a>
+                <a href="#website-creation">Website Creation</a>
+            </div>
+
+            <div class="mt-4">
+
+                <!-- 01 — BUSINESS SETUP -->
+                <article class="service-detail" id="business-setup" data-aos="fade-up">
+                    <div class="sd-meta">
+                        <span class="sd-number">01</span>
+                        <span class="sd-icon"><i class="fa-solid fa-building"></i></span>
+                    </div>
+                    <h2 class="sd-title">Business Setup in Dubai</h2>
+                    <p class="sd-lede">
+                        <strong style="color:rgba(255,255,255,.65);font-weight:500;">Start Your Business in Dubai with Profentra Aurex.</strong>
+                        Starting a business in Dubai involves choosing the right activity, legal structure, licence and approvals.
+                        Profentra Aurex provides end-to-end business setup support to help entrepreneurs and companies establish
+                        their business in the UAE.
+                    </p>
+
+                    <h3 class="sd-subhead">Our Business Setup Process</h3>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-num">01</span><div><h4>Business Consultation</h4><p>We understand your business idea, proposed activities, ownership requirements and business plans.</p></div></div>
+                        <div class="step"><span class="step-num">02</span><div><h4>Select Business Activity</h4><p>We help identify the appropriate business activity based on the products or services you plan to offer.</p></div></div>
+                        <div class="step"><span class="step-num">03</span><div><h4>Choose the Legal Structure</h4><p>We guide you through the applicable legal structure for your business, depending on the activity and ownership.</p></div></div>
+                        <div class="step"><span class="step-num">04</span><div><h4>Trade Name Selection</h4><p>Choose a suitable company name and proceed with the required trade name reservation.</p></div></div>
+                        <div class="step"><span class="step-num">05</span><div><h4>Initial Approval</h4><p>We assist with the initial approval and required documentation.</p></div></div>
+                        <div class="step"><span class="step-num">06</span><div><h4>Prepare Company Documents</h4><p>We coordinate the applicable incorporation documents and MOA or other required agreements.</p></div></div>
+                        <div class="step"><span class="step-num">07</span><div><h4>Office &amp; Ejari</h4><p>Where required, we assist with office and tenancy documentation.</p></div></div>
+                        <div class="step"><span class="step-num">08</span><div><h4>Additional Approvals</h4><p>Certain activities may require approvals from other government or regulatory authorities.</p></div></div>
+                        <div class="step"><span class="step-num">09</span><div><h4>Licence Issuance</h4><p>Once the requirements are completed, we assist with obtaining the applicable business licence.</p></div></div>
+                        <div class="step"><span class="step-num">10</span><div><h4>Post-Licence Support</h4><p>We can continue supporting your company with visas, PRO services, accounting, bookkeeping, VAT, Corporate Tax and AML compliance.</p></div></div>
+                    </div>
+
+                    <h3 class="sd-subhead">Why Choose Profentra Aurex?</h3>
+                    <div class="includes-grid">
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> One business partner for setup and ongoing support</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> End-to-end guidance from consultation to licence</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Complete post-licence services under one roof</span>
+                    </div>
+
+                    <div class="sd-cta">
+                        <a href="index.html#contact" class="btn btn-shimmer">Get a Setup Consultation <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                        <a href="tel:+971551020796" class="btn btn-gold-outline-premium"><i class="fa-solid fa-phone me-2"></i> Call Us</a>
+                    </div>
+                </article>
+
+                <!-- 02 — DED / DET LICENCE -->
+                <article class="service-detail" id="ded-det-licence" data-aos="fade-up">
+                    <div class="sd-meta">
+                        <span class="sd-number">02</span>
+                        <span class="sd-icon"><i class="fa-solid fa-file-signature"></i></span>
+                    </div>
+                    <h2 class="sd-title">DED / DET Company Licence Process in Dubai</h2>
+                    <p class="sd-lede">
+                        <strong style="color:rgba(255,255,255,.65);font-weight:500;">Get Your Dubai Mainland Trade Licence.</strong>
+                        The Dubai Department of Economy and Tourism (DET), formerly known as DED, handles licensing and regulation
+                        for many Dubai mainland businesses. Profentra Aurex assists businesses with the Dubai mainland company
+                        licence process, from activity selection through licence issuance.
+                    </p>
+
+                    <h3 class="sd-subhead">DED / DET Process</h3>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-num">01</span><div><h4>Select Business Activity</h4><p>Determine the activity or activities your company intends to conduct.</p></div></div>
+                        <div class="step"><span class="step-num">02</span><div><h4>Select Legal Form</h4><p>Choose the applicable legal structure based on the activity and ownership requirements.</p></div></div>
+                        <div class="step"><span class="step-num">03</span><div><h4>Reserve Trade Name</h4><p>Submit your preferred company name for reservation and approval.</p></div></div>
+                        <div class="step"><span class="step-num">04</span><div><h4>Initial Approval</h4><p>Apply for the required initial approval.</p></div></div>
+                        <div class="step"><span class="step-num">05</span><div><h4>MOA &amp; Documents</h4><p>Prepare the applicable incorporation documents and Memorandum of Association where required.</p></div></div>
+                        <div class="step"><span class="step-num">06</span><div><h4>Tenancy / Ejari</h4><p>Complete the applicable office and tenancy requirements.</p></div></div>
+                        <div class="step"><span class="step-num">07</span><div><h4>External Approvals</h4><p>If your activity is regulated, obtain approvals from the relevant authority.</p></div></div>
+                        <div class="step"><span class="step-num">08</span><div><h4>Submit Final Application</h4><p>Submit the required documents and approvals for final licence processing.</p></div></div>
+                        <div class="step"><span class="step-num">09</span><div><h4>Pay Government Fees</h4><p>Complete the applicable government and licensing payments.</p></div></div>
+                        <div class="step"><span class="step-num">10</span><div><h4>Receive Your Trade Licence</h4><p>Once approved, your Dubai mainland trade licence is issued.</p></div></div>
+                    </div>
+
+                    <h3 class="sd-subhead">After Licence Issuance — We Also Assist With</h3>
+                    <div class="includes-grid">
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Establishment card</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Immigration services</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Investor and employee visas</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> PRO services</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Accounting and bookkeeping</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> VAT</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Corporate Tax</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> AML compliance</span>
+                    </div>
+
+                    <div class="sd-cta">
+                        <a href="index.html#contact" class="btn btn-shimmer">Start Your Mainland Company <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                </article>
+
+                <!-- 03 — VISA SERVICES -->
+                <article class="service-detail" id="visa-services" data-aos="fade-up">
+                    <div class="sd-meta">
+                        <span class="sd-number">03</span>
+                        <span class="sd-icon"><i class="fa-solid fa-passport"></i></span>
+                    </div>
+                    <h2 class="sd-title">UAE Visa Services</h2>
+                    <p class="sd-lede">
+                        <strong style="color:rgba(255,255,255,.65);font-weight:500;">Visa Processing Support in Dubai.</strong>
+                        Profentra Aurex provides visa and immigration support for individuals, employees, investors and families
+                        in the UAE. We help coordinate the applicable application, documentation and government processing requirements.
+                    </p>
+
+                    <h3 class="sd-subhead">Visa Process</h3>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-num">01</span><div><h4>Determine Visa Type</h4><p>We identify the appropriate visa category based on your circumstances and eligibility.</p></div></div>
+                        <div class="step"><span class="step-num">02</span><div><h4>Document Check</h4><p>We review the required documents and advise you if anything is missing.</p></div></div>
+                        <div class="step"><span class="step-num">03</span><div><h4>Application Submission</h4><p>The application is submitted through the applicable government channel.</p></div></div>
+                        <div class="step"><span class="step-num">04</span><div><h4>Entry Permit / Status Process</h4><p>Where applicable, we assist with the relevant entry permit or change-of-status process.</p></div></div>
+                        <div class="step"><span class="step-num">05</span><div><h4>Medical Fitness Test</h4><p>For applicable residence visa categories, complete the required medical fitness examination.</p></div></div>
+                        <div class="step"><span class="step-num">06</span><div><h4>Emirates ID Application</h4><p>We assist with the Emirates ID application and biometrics requirements where applicable.</p></div></div>
+                        <div class="step"><span class="step-num">07</span><div><h4>Health Insurance</h4><p>Arrange the required health insurance where applicable.</p></div></div>
+                        <div class="step"><span class="step-num">08</span><div><h4>Residence Visa Processing</h4><p>Complete the applicable residence visa process.</p></div></div>
+                        <div class="step"><span class="step-num">09</span><div><h4>Visa Completion</h4><p>Once approved, the applicant receives the relevant residence documentation.</p></div></div>
+                    </div>
+
+                    <h3 class="sd-subhead">Visa Services We Support</h3>
+                    <div class="includes-grid">
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Employment visas</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Investor / partner visas</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Family visas</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Dependent visas</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Golden Visa assistance</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Visa renewal</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Visa cancellation</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Status change</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Entry permit assistance</span>
+                    </div>
+
+                    <div class="sd-note">
+                        Requirements vary according to visa category and applicant circumstances.
+                    </div>
+
+                    <div class="sd-cta">
+                        <a href="index.html#contact" class="btn btn-shimmer">Request a Document Check <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                        <a href="https://wa.me/971551020796" target="_blank" rel="noopener" class="btn btn-gold-outline-premium"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Us</a>
+                    </div>
+                </article>
+
+                <!-- 04 — PRO SERVICES -->
+                <article class="service-detail" id="pro-services" data-aos="fade-up">
+                    <div class="sd-meta">
+                        <span class="sd-number">04</span>
+                        <span class="sd-icon"><i class="fa-solid fa-landmark"></i></span>
+                    </div>
+                    <h2 class="sd-title">PRO Services in Dubai</h2>
+                    <p class="sd-lede">
+                        <strong style="color:rgba(255,255,255,.65);font-weight:500;">Professional Government &amp; PRO Services.</strong>
+                        Managing government documentation and business-related procedures can take valuable time. Profentra Aurex
+                        provides PRO services in Dubai to help businesses manage applicable government processes and documentation.
+                    </p>
+
+                    <h3 class="sd-subhead">Our PRO Service Process</h3>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-num">01</span><div><h4>Understand Your Requirement</h4><p>We identify the government service or documentation required.</p></div></div>
+                        <div class="step"><span class="step-num">02</span><div><h4>Document Collection</h4><p>We provide a checklist and collect the necessary documents.</p></div></div>
+                        <div class="step"><span class="step-num">03</span><div><h4>Document Verification</h4><p>We check the submitted documents for completeness and applicable requirements.</p></div></div>
+                        <div class="step"><span class="step-num">04</span><div><h4>Application Preparation</h4><p>We prepare the relevant application and documentation.</p></div></div>
+                        <div class="step"><span class="step-num">05</span><div><h4>Government Submission</h4><p>We submit the application through the applicable government channel.</p></div></div>
+                        <div class="step"><span class="step-num">06</span><div><h4>Follow-Up</h4><p>We monitor the application and coordinate required follow-ups.</p></div></div>
+                        <div class="step"><span class="step-num">07</span><div><h4>Completion</h4><p>Once approved, we provide the completed document, approval or service outcome.</p></div></div>
+                    </div>
+
+                    <h3 class="sd-subhead">PRO Services May Include</h3>
+                    <div class="includes-grid">
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Licence-related government procedures</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Immigration-related services</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Visa processing support</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Establishment card services</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Labour-related procedures</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Government document processing</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Company amendments and related procedures</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Renewals and cancellations</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> General government liaison services</span>
+                    </div>
+
+                    <div class="sd-cta">
+                        <a href="index.html#contact" class="btn btn-shimmer">Save Time — Talk to Us <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                </article>
+
+                <!-- 05 — ACCOUNTING & BOOKKEEPING -->
+                <article class="service-detail" id="accounting-bookkeeping" data-aos="fade-up">
+                    <div class="sd-meta">
+                        <span class="sd-number">05</span>
+                        <span class="sd-icon"><i class="fa-solid fa-calculator"></i></span>
+                    </div>
+                    <h2 class="sd-title">Accounting &amp; Bookkeeping Services</h2>
+                    <p class="sd-lede">
+                        <strong style="color:rgba(255,255,255,.65);font-weight:500;">Complete Financial Support for Your Business.</strong>
+                        Profentra Aurex provides accounting and bookkeeping support to help businesses maintain organised
+                        financial records, understand performance and stay ready for audits and tax requirements.
+                    </p>
+
+                    <h3 class="sd-subhead">Accounting &amp; Bookkeeping Process</h3>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-num">01</span><div><h4>Understand Your Business</h4><p>We review your business activity, transactions and accounting requirements.</p></div></div>
+                        <div class="step"><span class="step-num">02</span><div><h4>Review Existing Records</h4><p>For existing businesses, we review available financial records and identify any areas requiring attention.</p></div></div>
+                        <div class="step"><span class="step-num">03</span><div><h4>Set Up Accounting Records</h4><p>We organise your accounting system and financial records according to your business requirements.</p></div></div>
+                        <div class="step"><span class="step-num">04</span><div><h4>Record Transactions</h4><p>Business income, expenses and other financial transactions are recorded systematically.</p></div></div>
+                        <div class="step"><span class="step-num">05</span><div><h4>Bank Reconciliation</h4><p>Bank transactions are reconciled with the accounting records.</p></div></div>
+                        <div class="step"><span class="step-num">06</span><div><h4>Financial Reports</h4><p>Relevant financial reports can be prepared to help you understand business performance.</p></div></div>
+                    </div>
+
+                    <h3 class="sd-subhead">What This Covers</h3>
+                    <div class="includes-grid">
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> General ledger management</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Accounts payable &amp; receivable</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Month-end &amp; year-end closing</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Financial statement preparation</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Management reporting packs</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Audit-ready records</span>
+                    </div>
+
+                    <div class="sd-cta">
+                        <a href="index.html#contact" class="btn btn-shimmer">Request a Quote <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                </article>
+
+                <!-- 06 — VAT & CORPORATE TAX -->
+                <article class="service-detail" id="vat-corporate-tax" data-aos="fade-up">
+                    <div class="sd-meta">
+                        <span class="sd-number">06</span>
+                        <span class="sd-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                    </div>
+                    <h2 class="sd-title">VAT &amp; Corporate Tax Services</h2>
+                    <p class="sd-lede">
+                        <strong style="color:rgba(255,255,255,.65);font-weight:500;">Registration, Filing &amp; Compliance Support.</strong>
+                        Profentra Aurex provides VAT and Corporate Tax services to help businesses meet applicable UAE tax
+                        requirements accurately and on time.
+                    </p>
+
+                    <h3 class="sd-subhead">VAT Registration &amp; Filing</h3>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-num">01</span><div><h4>VAT Assessment</h4><p>We review whether VAT registration is applicable based on your business circumstances.</p></div></div>
+                        <div class="step"><span class="step-num">02</span><div><h4>Document Preparation</h4><p>We assist with the required VAT registration information and documents.</p></div></div>
+                        <div class="step"><span class="step-num">03</span><div><h4>VAT Registration</h4><p>The application is submitted through the applicable UAE tax authority process.</p></div></div>
+                        <div class="step"><span class="step-num">04</span><div><h4>VAT Return Preparation</h4><p>We review the relevant VAT records and prepare the applicable VAT return.</p></div></div>
+                        <div class="step"><span class="step-num">05</span><div><h4>VAT Filing</h4><p>The VAT return is submitted through the applicable tax system.</p></div></div>
+                        <div class="step"><span class="step-num">06</span><div><h4>Record Keeping</h4><p>We assist with maintaining organised VAT-related records.</p></div></div>
+                    </div>
+
+                    <h3 class="sd-subhead">Corporate Tax Services</h3>
+                    <div class="includes-grid">
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Corporate Tax registration assistance</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Corporate Tax compliance support</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Tax-period accounting support</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Corporate Tax return preparation support</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Record and documentation support</span>
+                    </div>
+
+                    <div class="sd-note">
+                        Tax obligations depend on the company’s circumstances and applicable UAE tax rules.
+                    </div>
+
+                    <div class="sd-cta">
+                        <a href="index.html#contact" class="btn btn-shimmer">Speak to a Tax Advisor <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                </article>
+
+                <!-- 07 — AML COMPLIANCE -->
+                <article class="service-detail" id="aml-compliance" data-aos="fade-up">
+                    <div class="sd-meta">
+                        <span class="sd-number">07</span>
+                        <span class="sd-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    </div>
+                    <h2 class="sd-title">AML Registration &amp; Compliance Services in UAE</h2>
+                    <p class="sd-lede">
+                        <strong style="color:rgba(255,255,255,.65);font-weight:500;">AML Registration &amp; Policy Support.</strong>
+                        Businesses covered by UAE Anti-Money Laundering requirements may need to meet specific registration,
+                        compliance and record-keeping obligations. Profentra Aurex provides AML registration and compliance
+                        support to help eligible businesses understand and implement applicable AML requirements.
+                    </p>
+
+                    <h3 class="sd-subhead">AML Registration &amp; Compliance Process</h3>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-num">01</span><div><h4>Business Assessment</h4><p>We review your business activity and determine the applicable AML requirements.</p></div></div>
+                        <div class="step"><span class="step-num">02</span><div><h4>AML Registration Assistance</h4><p>Where registration is required, we assist with the applicable registration process.</p></div></div>
+                        <div class="step"><span class="step-num">03</span><div><h4>Risk Assessment</h4><p>We assist with identifying relevant money-laundering and financial-crime risks applicable to the business.</p></div></div>
+                        <div class="step"><span class="step-num">04</span><div><h4>AML Policy Preparation</h4><p>We help prepare AML policies and procedures appropriate to the business and applicable requirements.</p></div></div>
+                        <div class="step"><span class="step-num">05</span><div><h4>Customer Due Diligence</h4><p>We assist businesses with establishing appropriate customer identification and due-diligence procedures.</p></div></div>
+                        <div class="step"><span class="step-num">06</span><div><h4>Record-Keeping Procedures</h4><p>We help establish appropriate procedures for maintaining required AML records.</p></div></div>
+                        <div class="step"><span class="step-num">07</span><div><h4>Compliance Guidance</h4><p>We provide ongoing guidance regarding applicable AML compliance responsibilities.</p></div></div>
+                    </div>
+
+                    <h3 class="sd-subhead">Our AML Services</h3>
+                    <div class="includes-grid">
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> AML registration assistance</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> AML policy preparation</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Risk assessment support</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Customer Due Diligence procedures</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Compliance procedures</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Record-keeping guidance</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> AML compliance support</span>
+                    </div>
+
+                    <div class="sd-note">
+                        AML requirements vary according to the business activity and applicable UAE regulations.
+                    </div>
+
+                    <div class="sd-cta">
+                        <a href="index.html#contact" class="btn btn-shimmer">Request an AML Assessment <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                </article>
+
+                <!-- 08 — WEBSITE CREATION -->
+                <article class="service-detail" id="website-creation" data-aos="fade-up">
+                    <div class="sd-meta">
+                        <span class="sd-number">08</span>
+                        <span class="sd-icon"><i class="fa-solid fa-code"></i></span>
+                    </div>
+                    <h2 class="sd-title">Website Creation &amp; Development in Dubai</h2>
+                    <p class="sd-lede">
+                        <strong style="color:rgba(255,255,255,.65);font-weight:500;">Build a Professional Website for Your Business.</strong>
+                        Your website is often the first place potential customers learn about your company. Profentra Aurex provides
+                        website creation and development services for startups, small businesses and established companies.
+                        We help businesses create professional websites designed around their brand, services and customers.
+                    </p>
+
+                    <h3 class="sd-subhead">Our Website Creation Process</h3>
+                    <div class="process-steps">
+                        <div class="step"><span class="step-num">01</span><div><h4>Understand Your Business</h4><p>We learn about your company, services, target customers and website goals.</p></div></div>
+                        <div class="step"><span class="step-num">02</span><div><h4>Website Planning</h4><p>We plan the website structure, pages, navigation and content requirements.</p></div></div>
+                        <div class="step"><span class="step-num">03</span><div><h4>Design &amp; Branding</h4><p>We create a website design aligned with your company’s brand and visual identity.</p></div></div>
+                        <div class="step"><span class="step-num">04</span><div><h4>Content Preparation</h4><p>We organise your service information, company details, images and other website content.</p></div></div>
+                        <div class="step"><span class="step-num">05</span><div><h4>Website Development</h4><p>The approved design is developed into a functional website.</p></div></div>
+                        <div class="step"><span class="step-num">06</span><div><h4>Mobile Responsive Design</h4><p>We ensure the website is designed to work across mobile phones, tablets and desktop devices.</p></div></div>
+                        <div class="step"><span class="step-num">07</span><div><h4>SEO Setup</h4><p>We structure website pages with relevant headings, page titles, descriptions and search-friendly content.</p></div></div>
+                        <div class="step"><span class="step-num">08</span><div><h4>Testing</h4><p>We check website pages, navigation, forms, links and mobile responsiveness before launch.</p></div></div>
+                        <div class="step"><span class="step-num">09</span><div><h4>Launch</h4><p>Once approved, the website is published on your domain.</p></div></div>
+                    </div>
+
+                    <h3 class="sd-subhead">Website Services</h3>
+                    <div class="includes-grid">
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Business websites</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Company profile websites</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Service websites</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Landing pages</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Mobile-responsive websites</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Website content</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Basic SEO setup</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Contact forms</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Domain and hosting assistance</span>
+                        <span class="include-item"><i class="fa-solid fa-circle"></i> Website maintenance support</span>
+                    </div>
+
+                    <div class="sd-cta">
+                        <a href="index.html#contact" class="btn btn-shimmer">Get a Website Quote <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ADDITIONAL SPECIALISED SERVICES — TWO-COLUMN GRID
+         ============================================================ -->
+    <section class="verticals-section" id="all-services">
+        <div class="bg-image"></div>
+        <div class="overlay"></div>
+
+        <div class="container">
+            <div class="section-divider-wrap reverse">
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <span class="section-label">Additional Specialised Services</span>
+                    <h2 class="section-title">Explore Our <span class="gold">19</span> Service Verticals</h2>
+                    <p class="section-sub">Specialised accounting, tax, visa and compliance services — all delivered with the same precision and care.</p>
+                </div>
+            </div>
+
+            <div class="verticals-grid" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- 01 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">01</span>
+                        <span class="vc-icon">📊</span>
+                    </div>
+                    <h3 class="vc-title">Outsourced Accounting</h3>
+                    <p class="vc-desc">Full-cycle accounting solutions tailored to your business size and industry. We handle everything from daily transactions to month-end closing, ensuring your books are always accurate and compliant.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> General ledger management</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Month-end &amp; year-end closing</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Financial statement preparation</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Industry-specific accounting</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 02 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">02</span>
+                        <span class="vc-icon">📚</span>
+                    </div>
+                    <h3 class="vc-title">Bookkeeping Services</h3>
+                    <p class="vc-desc">Accurate, daily bookkeeping to keep your financial records pristine and audit-ready. We ensure every transaction is recorded correctly so you have real-time visibility into your business finances.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Daily transaction recording</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Accounts payable &amp; receivable</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Expense tracking &amp; categorization</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Audit-ready records</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 03 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">03</span>
+                        <span class="vc-icon">📈</span>
+                    </div>
+                    <h3 class="vc-title">Financial Reporting</h3>
+                    <p class="vc-desc">Timely, clear, and compliant financial statements for stakeholders and regulators. We deliver reports that give you confidence and clarity about your business performance.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Balance sheet preparation</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Profit &amp; loss statements</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Cash flow reporting</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Management reporting packs</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 04 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">04</span>
+                        <span class="vc-icon">🏦</span>
+                    </div>
+                    <h3 class="vc-title">Bank Reconciliation</h3>
+                    <p class="vc-desc">Meticulous reconciliation to ensure your books match your bank records perfectly. We identify discrepancies quickly and keep your financial data accurate and reliable.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Monthly bank reconciliation</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Discrepancy identification</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Multi-currency reconciliation</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Bank feed integration</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 05 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">05</span>
+                        <span class="vc-icon">🚀</span>
+                    </div>
+                    <h3 class="vc-title">Startup Accounting</h3>
+                    <p class="vc-desc">End-to-end accounting support for new businesses — from setup to scaling. We help startups build a strong financial foundation from day one.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Business setup accounting</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Financial modeling</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Investor-ready reporting</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Growth planning support</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 06 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">06</span>
+                        <span class="vc-icon">💹</span>
+                    </div>
+                    <h3 class="vc-title">Financial Health Check</h3>
+                    <p class="vc-desc">Comprehensive diagnostic of your financial position with actionable insights. We analyze your financial data and provide clear recommendations for improvement.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Full financial diagnostic</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Profitability analysis</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Cash flow assessment</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Actionable improvement plan</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 07 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">07</span>
+                        <span class="vc-icon">💰</span>
+                    </div>
+                    <h3 class="vc-title">Corporate Tax Advisory</h3>
+                    <p class="vc-desc">Expert guidance on UAE corporate tax compliance, planning, and optimization. We help you navigate the new corporate tax landscape with confidence.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Corporate tax registration</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Tax planning &amp; optimization</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Compliance support</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Tax return filing</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 08 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">08</span>
+                        <span class="vc-icon">🧾</span>
+                    </div>
+                    <h3 class="vc-title">VAT Advisory &amp; Filing</h3>
+                    <p class="vc-desc">Full-cycle VAT compliance, registration, filing, and advisory services. We ensure you meet all UAE VAT requirements accurately and on time.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> VAT registration</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> VAT return filing</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> VAT health checks</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> VAT dispute resolution</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 09 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">09</span>
+                        <span class="vc-icon">🛂</span>
+                    </div>
+                    <h3 class="vc-title">Employment Visas</h3>
+                    <p class="vc-desc">Seamless employment visa processing for your workforce in the UAE. We handle the entire process so you can focus on your business.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Employment visa processing</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Work permit issuance</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Medical &amp; biometrics coordination</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Emirates ID processing</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 10 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">10</span>
+                        <span class="vc-icon">👨‍👩‍👧</span>
+                    </div>
+                    <h3 class="vc-title">Family Sponsorship Visas</h3>
+                    <p class="vc-desc">Hassle-free family visa sponsorship for your loved ones in the UAE. We make it easy to bring your family together.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Family visa sponsorship</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Spouse &amp; children visas</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Parent visa support</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Visa renewal assistance</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 11 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">11</span>
+                        <span class="vc-icon">🤝</span>
+                    </div>
+                    <h3 class="vc-title">Investor &amp; Partner Visas</h3>
+                    <p class="vc-desc">Specialized visa solutions for investors, business partners, and stakeholders in the UAE. We facilitate your entry and stay in the region.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Investor visa processing</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Partner visa support</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Stakeholder visas</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Renewal &amp; extension</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 12 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">12</span>
+                        <span class="vc-icon">🌟</span>
+                    </div>
+                    <h3 class="vc-title">Golden Visa Assistance</h3>
+                    <p class="vc-desc">Expert guidance and processing for UAE Golden Visa applications. We help you secure long-term residency in the UAE.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Golden Visa eligibility assessment</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Full application support</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Document preparation</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Follow-up &amp; coordination</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 13 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">13</span>
+                        <span class="vc-icon">📄</span>
+                    </div>
+                    <h3 class="vc-title">Document Attestation &amp; Legalization</h3>
+                    <p class="vc-desc">Complete document attestation and legalization services for official use in the UAE and internationally. We handle the bureaucracy so you don't have to.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> MOFA attestation</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Embassy legalization</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Educational certificate attestation</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Commercial document attestation</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 14 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">14</span>
+                        <span class="vc-icon">🏛️</span>
+                    </div>
+                    <h3 class="vc-title">PRO Services</h3>
+                    <p class="vc-desc">Government liaison, paperwork, and administrative support for your business. We handle all your PRO needs efficiently.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Government liaison</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Document processing</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> License renewals</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Administrative support</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 15 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">15</span>
+                        <span class="vc-icon">🔍</span>
+                    </div>
+                    <h3 class="vc-title">Audit Support</h3>
+                    <p class="vc-desc">Pre-audit preparation, documentation, and on-ground support for statutory audits. We help you sail through audits with confidence.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Pre-audit preparation</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Documentation support</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Auditor liaison</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Post-audit follow-up</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 16 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">16</span>
+                        <span class="vc-icon">🛡️</span>
+                    </div>
+                    <h3 class="vc-title">Internal Controls Setup</h3>
+                    <p class="vc-desc">Design and implementation of robust internal control frameworks to protect your business assets and ensure operational integrity.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Control framework design</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Risk assessment</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Policy development</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Implementation &amp; training</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 17 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">17</span>
+                        <span class="vc-icon">👥</span>
+                    </div>
+                    <h3 class="vc-title">Payroll &amp; HR Services</h3>
+                    <p class="vc-desc">Comprehensive payroll management, HR compliance, and employee support services. We make payroll simple and stress-free.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Payroll processing</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> WPS compliance</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Leave &amp; attendance management</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> HR policy support</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 18 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">18</span>
+                        <span class="vc-icon">📉</span>
+                    </div>
+                    <h3 class="vc-title">Virtual CFO Services</h3>
+                    <p class="vc-desc">Strategic financial leadership on demand — without the full-time cost. Get expert CFO guidance tailored to your business stage.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Financial strategy</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Budgeting &amp; forecasting</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Investor relations</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Strategic planning</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 19 -->
+                <div class="vertical-card">
+                    <div class="vc-header">
+                        <span class="vc-num">19</span>
+                        <span class="vc-icon">🔐</span>
+                    </div>
+                    <h3 class="vc-title">AML Compliance</h3>
+                    <p class="vc-desc">Anti-Money Laundering compliance frameworks, policies, and training. We help you stay compliant with UAE AML regulations.</p>
+                    <div class="vc-features">
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> AML policy development</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Risk assessment</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Staff training</span>
+                        <span class="vc-feature"><i class="fa-solid fa-circle"></i> Regulatory reporting</span>
+                    </div>
+                    <a href="index.html#contact" class="vc-cta">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CTA BAND
+         ============================================================ -->
+    <section class="cta-band">
+        <div class="container" data-aos="fade-up">
+            <h2>Ready to Get <span class="gold">Started?</span></h2>
+            <p>Tell us what your business needs — we'll come back with a clear plan, timeline and quotation.</p>
+            <div class="btn-group-cta">
+                <a href="index.html#contact" class="btn btn-shimmer">Request a Quote <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                <a href="https://wa.me/971551020796" target="_blank" rel="noopener" class="btn btn-gold-outline-premium"><i class="fa-brands fa-whatsapp me-2"></i> Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="site-footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="50">
+                    <div class="footer-brand">
+                        <img src="logo.png" alt="Profentraaurex Logo" />
+                        <div class="footer-brand-text">PROFENTRA<span>AUREX</span></div>
+                    </div>
+                    <p class="footer-blurb">
+                        <strong>Accounting &amp; Business Advisory</strong> — trusted partner for startups, SMEs, and enterprises across the UAE. From bookkeeping to visas, we deliver excellence.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/971551020796" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-6 footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#whyus">Why Us</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#website">Websites</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-6 footer-col" data-aos="fade-up" data-aos-delay="150">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#business-setup">Business Setup</a></li>
+                        <li><a href="services.html#ded-det-licence">DED / DET Licence</a></li>
+                        <li><a href="services.html#visa-services">UAE Visa Services</a></li>
+                        <li><a href="services.html#pro-services">PRO Services</a></li>
+                        <li><a href="services.html#accounting-bookkeeping">Accounting &amp; Bookkeeping</a></li>
+                        <li><a href="services.html#vat-corporate-tax">VAT &amp; Corporate Tax</a></li>
+                        <li><a href="services.html#aml-compliance">AML Compliance</a></li>
+                        <li><a href="services.html#website-creation">Website Creation</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12 footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Get in Touch</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+971551020796"><i class="fa-solid fa-phone me-2" style="color:var(--gold);opacity:0.2;width:18px;"></i> +971 55 1020 796</a></li>
+                        <li><a href="mailto:info@profentraaurex.com"><i class="fa-solid fa-envelope me-2" style="color:var(--gold);opacity:0.2;width:18px;"></i> info@profentraaurex.com</a></li>
+                        <li style="color:rgba(255,255,255,0.15);font-size:0.85rem;margin-top:4px;">
+                            <i class="fa-solid fa-location-dot me-2" style="color:var(--gold);opacity:0.2;width:18px;"></i>
+                            Al Nadha, Dubai 500001, UAE
+                        </li>
+                        <li style="color:rgba(255,255,255,0.08);font-size:0.7rem;margin-top:6px;">
+                            Sat–Thu · 9:00 AM – 6:00 PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider" />
+
+            <div class="footer-bottom text-center">
+                &copy; 2026 <span>Profentraaurex</span>. All rights reserved. Accounting &amp; Business Advisory — Dubai.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/971551020796" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // ============================================================
+        // AOS
+        // ============================================================
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80,
+            delay: 50,
+            disable: window.innerWidth < 768
+        });
+
+        // ============================================================
+        // GOLD DIVIDER LINES
+        // ============================================================
+        document.querySelectorAll('.services-list, .verticals-section').forEach(section => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) section.classList.add('section-visible');
+                });
+            }, { threshold: 0.05 });
+            observer.observe(section);
+        });
+
+        // ============================================================
+        // CUSTOM CURSOR
+        // ============================================================
+        const cursor = document.getElementById('customCursor');
+        const cursorDot = document.getElementById('cursorDot');
+
+        if (window.innerWidth > 1024) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+
+            const interactive = document.querySelectorAll(
+                'a, button, .btn, .nav-link, .logo, .vertical-card, .step, .service-pills a, .footer-social a, .footer-links a, .dropdown-item'
+            );
+            interactive.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        }
+
+        // ============================================================
+        // HEADER SCROLL
+        // ============================================================
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // ============================================================
+        // BACK TO TOP
+        // ============================================================
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+
+        // ============================================================
+        // SMOOTH SCROLL TO HASH ON LOAD
+        // ============================================================
+        window.addEventListener('load', function () {
+            if (window.location.hash) {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 300);
+                }
+            }
+            AOS.refresh();
+            document.querySelectorAll('.services-list, .verticals-section').forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight) section.classList.add('section-visible');
+            });
+        });
+
+        console.log('✨ Profentraaurex — Services Page (Two-Column Verticals)');
+    </script>
+
+</body>
+</html>
